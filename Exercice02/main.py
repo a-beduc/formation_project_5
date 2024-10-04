@@ -19,7 +19,7 @@ def main():
 
     student_name = input("Entrez le nom de l’étudiant : ").capitalize()
     if student_name in students.keys():
-        print(f"Notes de{student_name}")
+        print(f"Notes de {student_name}")
         grades_sum = 0
         for key, value in students[student_name].items():
             print(f"{key}: {value}")
