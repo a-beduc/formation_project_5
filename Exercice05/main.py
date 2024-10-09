@@ -14,9 +14,9 @@ def subtraction(a, b):
     """
     Return the subtraction of two numbers.
         Parameters:
-                a : A number
-                b : A number
+                a (A number)
+                b (A number)
         Returns:
-                a + b
+                number : a - b
     """
     return a - b

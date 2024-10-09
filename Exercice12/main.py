@@ -34,10 +34,10 @@ class Library:
                 break
 
     def available_books(self):
-        return f'Available books : {[book.title for book in self.books]}'
+        return [book.title for book in self.books]
 
     def borrowed_books(self):
-        return f'Borrowed books : {[book.title for book in self.borrowed_books_list]}'
+        return [book.title for book in self.borrowed_books_list]
 
 
 def main():

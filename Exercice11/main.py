@@ -26,13 +26,15 @@ class BankAccount:
         Withdraw amount from bank account, if you resolve over-withdraws by withdrawing the content of the account.
         """
         try:
-            new_balance = self.balance - amount
-            if new_balance < 0:
-                withdraw_amount = self.balance
-                self.balance = 0
-                print(f'You tried to over-withdraw : "{amount}", could only withdraw "{withdraw_amount}"')
-            else:
-                self.balance = new_balance
+            if amount >= 0:
+                self.balance = self.balance - min(amount, self.balance)
+            # new_balance = self.balance - amount
+            # if new_balance < 0:
+            #     withdraw_amount = self.balance
+            #     self.balance = 0
+            #     print(f'You tried to over-withdraw : "{amount}", could only withdraw "{withdraw_amount}"')
+            # else:
+            #     self.balance = new_balance
         except TypeError:
             print(f'Could not withdraw "{amount}". Invalid amount, amount must be a number')
 

@@ -1,8 +1,9 @@
 def log_decorator(func):
-    print("Message before function.")
-    func()
-    print("Message after function.")
-
+    def inner_function():
+        print("Message before function.")
+        func()
+        print("Message after function.")
+    return inner_function
 
 @log_decorator
 def function_test():
